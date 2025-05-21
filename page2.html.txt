@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>الصفحة الثانية</title>
+</head>
+<body style="background-color:#111; color:white; text-align:center; font-family:Arial;">
+  <h1>مرحبًا بك في الصفحة الثانية!</h1>
+  <p>الصفحه الثانيه</p>
+
+  <a href="index.html" style="text-decoration: none;">
+  <button style="padding: 10px 20px; background-color: #00b894; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    ارجع إلى الصفحة الرئيسية
+  </button>
+</a>

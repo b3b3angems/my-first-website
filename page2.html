@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>الصفحة الثانية</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0 20px;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    button {
+      padding: 12px 24px;
+      background-color: #00b894;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background-color: #00e6ac;
+      box-shadow: 0 0 10px #00e6ac;
+    }
+
+    .clock {
+      margin-top: 60px;
+      font-size: 20px;
+      color: #00cec9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>مرحبًا بك في الصفحة الثانية!</h1>
+  <p>هذه الصفحة الثانية من الموقع</p>
+
+  <a href="index.html" style="text-decoration: none;">
+    <button>ارجع إلى الصفحة الرئيسية</button>
+  </a>
+
+  <div class="clock" id="clock">⏰ الوقت الآن: جاري التحميل...</div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+
+      const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} ${ampm}`;
+      document.getElementById('clock').textContent = `⏰ الوقت الآن: ${formattedTime}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+
+</body>
+</html>
