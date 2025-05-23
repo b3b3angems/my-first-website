@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>محرك البحث</title>
+</head>
+<body>
+  <h1>🔎 محرك بحث مزيف</h1>
+
+  <form method="GET">
+    <input type="text" name="query" placeholder="اكتب أي شيء">
+    <button type="submit">ابحث</button>
+  </form>
+
+  <p>نتيجة البحث:</p>
+  <div id="result"></div>
+
+  <script>
+    // جلب القيمة من رابط URL
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get("query");
+
+    if (query) {
+      document.getElementById("result").innerHTML = query;
+    }
+  </script>
+</body>
+</html>
